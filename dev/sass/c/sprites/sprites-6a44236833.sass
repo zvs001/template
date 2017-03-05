@@ -1,0 +1,165 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$arrow-h-name: 'arrow-h'
+$arrow-h-x: 0px
+$arrow-h-y: 0px
+$arrow-h-offset-x: 0px
+$arrow-h-offset-y: 0px
+$arrow-h-width: 35px
+$arrow-h-height: 41px
+$arrow-h-total-width: 104px
+$arrow-h-total-height: 81px
+$arrow-h-image: '../images/sprites/icons.png'
+$arrow-h: (0px, 0px, 0px, 0px, 35px, 41px, 104px, 81px, '../images/sprites/icons.png', 'arrow-h', )
+$arrow-name: 'arrow'
+$arrow-x: 35px
+$arrow-y: 0px
+$arrow-offset-x: -35px
+$arrow-offset-y: 0px
+$arrow-width: 35px
+$arrow-height: 41px
+$arrow-total-width: 104px
+$arrow-total-height: 81px
+$arrow-image: '../images/sprites/icons.png'
+$arrow: (35px, 0px, -35px, 0px, 35px, 41px, 104px, 81px, '../images/sprites/icons.png', 'arrow', )
+$arrow2-h-name: 'arrow2-h'
+$arrow2-h-x: 70px
+$arrow2-h-y: 0px
+$arrow2-h-offset-x: -70px
+$arrow2-h-offset-y: 0px
+$arrow2-h-width: 34px
+$arrow2-h-height: 40px
+$arrow2-h-total-width: 104px
+$arrow2-h-total-height: 81px
+$arrow2-h-image: '../images/sprites/icons.png'
+$arrow2-h: (70px, 0px, -70px, 0px, 34px, 40px, 104px, 81px, '../images/sprites/icons.png', 'arrow2-h', )
+$arrow2-name: 'arrow2'
+$arrow2-x: 0px
+$arrow2-y: 41px
+$arrow2-offset-x: 0px
+$arrow2-offset-y: -41px
+$arrow2-width: 34px
+$arrow2-height: 40px
+$arrow2-total-width: 104px
+$arrow2-total-height: 81px
+$arrow2-image: '../images/sprites/icons.png'
+$arrow2: (0px, 41px, 0px, -41px, 34px, 40px, 104px, 81px, '../images/sprites/icons.png', 'arrow2', )
+$home-name: 'home'
+$home-x: 64px
+$home-y: 41px
+$home-offset-x: -64px
+$home-offset-y: -41px
+$home-width: 20px
+$home-height: 17px
+$home-total-width: 104px
+$home-total-height: 81px
+$home-image: '../images/sprites/icons.png'
+$home: (64px, 41px, -64px, -41px, 20px, 17px, 104px, 81px, '../images/sprites/icons.png', 'home', )
+$letter-name: 'letter — копия'
+$letter-x: 84px
+$letter-y: 41px
+$letter-offset-x: -84px
+$letter-offset-y: -41px
+$letter-width: 18px
+$letter-height: 13px
+$letter-total-width: 104px
+$letter-total-height: 81px
+$letter-image: '../images/sprites/icons.png'
+$letter-: (84px, 41px, -84px, -41px, 18px, 13px, 104px, 81px, '../images/sprites/icons.png', 'letter — копия', )
+$letter-name: 'letter'
+$letter-x: 64px
+$letter-y: 58px
+$letter-offset-x: -64px
+$letter-offset-y: -58px
+$letter-width: 18px
+$letter-height: 13px
+$letter-total-width: 104px
+$letter-total-height: 81px
+$letter-image: '../images/sprites/icons.png'
+$letter: (64px, 58px, -64px, -58px, 18px, 13px, 104px, 81px, '../images/sprites/icons.png', 'letter', )
+$link-arr-name: 'link-arr'
+$link-arr-x: 82px
+$link-arr-y: 58px
+$link-arr-offset-x: -82px
+$link-arr-offset-y: -58px
+$link-arr-width: 16px
+$link-arr-height: 11px
+$link-arr-total-width: 104px
+$link-arr-total-height: 81px
+$link-arr-image: '../images/sprites/icons.png'
+$link-arr: (82px, 58px, -82px, -58px, 16px, 11px, 104px, 81px, '../images/sprites/icons.png', 'link-arr', )
+$phone-name: 'phone'
+$phone-x: 34px
+$phone-y: 41px
+$phone-offset-x: -34px
+$phone-offset-y: -41px
+$phone-width: 30px
+$phone-height: 30px
+$phone-total-width: 104px
+$phone-total-height: 81px
+$phone-image: '../images/sprites/icons.png'
+$phone: (34px, 41px, -34px, -41px, 30px, 30px, 104px, 81px, '../images/sprites/icons.png', 'phone', )
+$spritesheet-width: 104px
+$spritesheet-height: 81px
+$spritesheet-image: '../images/sprites/icons.png'
+$spritesheet-sprites: ($arrow-h, $arrow, $arrow2-h, $arrow2, $home, $letter-, $letter, $link-arr, $phone, )
+$spritesheet: (104px, 81px, '../images/sprites/icons.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

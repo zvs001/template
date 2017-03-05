@@ -1,0 +1,49 @@
+{
+  "name": "zvs_template",
+  "version": "1.0.0",
+  "description": "Gulp Project",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "browser-sync": "^2.11.0",
+    "cssnano": "^3.8.0",
+    "del": "^2.2.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-debug": "^3.0.0",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jade-filter": "^1.0.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "6.2.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp.spritesmith": "^6.3.0",
+    "imagemin-pngquant": "^5.0.0",
+    "node-bourbon": "^4.2.3",
+    "postcss-assets": "^4.1.0",
+    "require-dir": "^0.3.1",
+    "stream-combiner2": "^1.1.1",
+    "vinyl-buffer": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zvs001@ukr.net",
+  "license": "ISC",
+  "dependencies": {
+    "bourbon": "^4.2.7"
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zvs001/template"
+  }
+}

@@ -1,0 +1,73 @@
+.section
+	&.pen
+		background: url("../images/pen.jpg") no-repeat top right
+	&__title
+		font-size: 36px
+		font-family: $cr
+		font-weight: normal
+		text-align: center
+
+		margin: 0 0 50px
+
+		position: relative
+		&.white
+			color: #fff
+		&:before, &:after
+			content: ""
+			background-color: #448ccb
+			height: 2px
+			width: 60px
+			position: absolute
+		&:before
+			bottom: -4px
+			left: 50%
+			transform: translateX(-50%)
+
+			margin-left: -11px
+			//TODO enable animation
+			//animation: flow-left 7s ease infinite
+		&:after
+			bottom: -9px
+			right: 50%
+			transform: translateX(50%)
+			
+			margin-right: -16px
+			//animation: flow-right 7s ease infinite
+			
+
+	&__link
+		text-align: center
+		a
+			color: #2268c6
+			border-bottom: 2px dotted #2268c6
+			padding: 0 0 2px
+			font-size: 16px
+			&:hover
+				color: $blue
+				border-bottom: 2px dotted $blue
+
+
+
+
+
+$min-flow: -20px;
+$max-flow: 10px
+@keyframes flow-left
+	0%
+		margin-left: $min-flow
+	40%
+		margin-left: $max-flow
+	80%
+		margin-left: $min-flow
+	100%
+		margin-left: $min-flow
+
+@keyframes flow-right
+	0%
+		margin-right: $min-flow
+	40%
+		margin-right: $max-flow
+	80%
+		margin-right: $min-flow
+	100%
+		margin-right: $min-flow

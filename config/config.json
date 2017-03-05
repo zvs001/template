@@ -1,0 +1,79 @@
+{
+	"gulp": {
+
+		"project": {
+			"root": "app/",
+			"trash": "./app/trash",
+			"temp": "./app/temp/",
+
+			"rev": true
+		},
+		"server": {
+			"port": 3333,
+			"dir": "./app/",
+			"notifications": true,
+			"deviceSync": false
+		},
+
+		"styles":{
+			"src": "./dev/sass/*.sass",
+			"watch": "./dev/sass/**/*.sass",
+			"dest": "./app/css/",
+
+			"bundle": {
+				"src": "./dev/libs/css/*.css",
+				"name": "bundle.css",
+				"dest": "./app/css/"
+			}
+		},
+
+		"jade":{
+			"src": "./dev/jade/**/*.{jade,pug}",
+			"watch": "./dev/jade/**/*.{jade,pug}",
+			"filter": "*.jade",
+			"dest": "./app/",
+			"minify": false
+			
+		},
+
+		"images":{
+			"src": "./dev/images/**/*.{png,jpg,jpeg}",
+			"dest": "./app/images/",
+
+			"sprites": {
+				"src": "dev/images/spritify/**/*.png",
+				"group": "dev/images/spritify/group/*.png",
+				"pathUrl": "../images/sprites/",
+				"name": "icons.png",
+				"cssname": "sprites.sass",
+				"dest": "app/images/sprites/",
+				"cssdest": "dev/sass/c/sprites/"
+			}
+		},
+
+		"scripts": {
+			"src": "./dev/js/**/*.js",
+			"dest": "./app/js/",
+			"bundle": {
+				"src": "./dev/libs/js/*.js",
+				"name": "bundle.js",
+				"dest": "./app/js/"
+			}
+		},
+
+		"fonts": {
+			"src": "dev/fonts/**/*",
+			"dest": "app/fonts"
+		},
+
+		"manifest":{
+			"dir": "./config/manifest/",
+
+			"css": "css-names.json",
+			"cssBundle": "cssBundle-names.json",
+			"js": "js-names.json",
+			"jsBundle": "jsBundle-names.json",
+			"sprites" : "sprite-names.json"
+		}
+	}
+}

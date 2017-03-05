@@ -1,0 +1,15 @@
+.breadcrumbs
+	margin: 0 0 0 2px
+.breadcrumb
+	display: inline-block
+	&:last-child
+		.breadcrumb__link:after
+			content: none
+	&__link
+		font-size: 12px
+		color: $gray
+		&:after
+			content: ">"
+			margin: 0 0 0 3px
+		&:hover, &:focus, &:active
+			color: $blue
