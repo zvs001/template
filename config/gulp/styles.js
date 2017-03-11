@@ -23,12 +23,13 @@ gulp.task('sass', function () {
 
 			gulp.src( config.styles.src ),
 
-			$.if(config.styles.sourcemaps, $.sourcemaps.init()),
+			$.if(config.project.sourcemaps, $.sourcemaps.init()),
 
 			$.sass({  includePaths: [
 						require("node-bourbon").includePaths,
 						//includePath(config.images.sprites.dest, "../../") //sprites
 					]}),
+
 			$.postcss([
 				assets({
 					basePath: 'app/',
@@ -36,7 +37,8 @@ gulp.task('sass', function () {
 				}),
 				autoprefixer
 			]),
-			$.if(config.styles.sourcemaps, $.sourcemaps.write()),
+
+			$.if(config.project.sourcemaps, $.sourcemaps.write()),
 
 			gulp.dest( config.styles.dest )
 

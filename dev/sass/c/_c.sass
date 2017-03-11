@@ -1,8 +1,16 @@
 @import fonts
 @import mixins
 @import models
+@import icons
 
+@import mixin/index
+/* TODO prites*/
+//@import sprites
 @import sprites/sprites
+
+//other fixes
+@import fix
+@import modules/wp
 
 body
 	padding: 0
@@ -13,7 +21,7 @@ a
 	text-decoration: none
 
 .container
-	width: $container-width
+	max-width: $container-width
 	margin: auto
 
 ul
@@ -27,3 +35,8 @@ ul
 	height: 100%
 .cf
 	clear: both
+
+//reset
+li
+	list-style: none
+

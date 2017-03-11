@@ -2,11 +2,14 @@
 	"gulp": {
 
 		"project": {
+			"name": "Winner",
+
 			"root": "app/",
 			"trash": "./app/trash",
 			"temp": "./app/temp/",
 
-			"rev": true
+			"rev": false,
+			"sourcemaps": true
 		},
 		"server": {
 			"port": 3333,
@@ -74,6 +77,8 @@
 			"js": "js-names.json",
 			"jsBundle": "jsBundle-names.json",
 			"sprites" : "sprite-names.json"
-		}
+		},
+
+		"archive": "./archive"
 	}
 }

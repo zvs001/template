@@ -17,6 +17,20 @@
 	&__submit
 		margin-left: 18px
 		flex-grow: 8
+	@media screen and (max-width: 1100px)
+		flex-wrap: wrap
+		&__input
+			flex-basis: 40%
+			margin: 0 10px 10px
+		&__submit
+			flex-basis: 90%
+			max-width: 300px
+			margin: 10px auto
+	@media screen and (max-width: 420px)
+		&__input
+			flex-basis: 90%
+		
+
 
 .form2
 	$margin: 30px

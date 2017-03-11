@@ -1,0 +1,25 @@
+.pagenav
+	text-align: center
+	&__cont
+		display: inline-block
+		position: relative
+	&__links
+		color: $black
+		font-size: 16px
+	&__link
+		color: $black
+		padding: 2px
+		margin: 0 2px
+		&:hover
+			color: $blue
+	&__arr
+		+sprite($page-nav)
+		position: absolute
+		bottom: 0
+		&:hover
+			+sprite($page-nav-h)
+		&.left
+			left: -26px
+		&.right
+			right: -26px
+			+ro(180)

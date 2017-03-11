@@ -1,0 +1,35 @@
+.comment
+	$bg: #eef2f4;
+	&__image
+		width: 20%
+		padding: 35px 0 25px
+		background-color: #fff
+		text-align: center
+		&.left
+			float: left
+	&__message
+		width: 80%
+		font-size: 24px
+		color: $blue2
+		background: $bg
+		padding: 50px 0
+		margin: -2px 0 34px
+		text-align: center
+
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			bottom: -20px
+			left: -17px
+			width: 0
+			height: 0
+			border-top: 40px solid $bg
+			border-right: 15px solid transparent
+			border-left: 15px solid transparent
+
+
+		&.left
+			float: left
+			&:after
+				+ro(45)

@@ -14,7 +14,28 @@ gulp.task('js', function () {
 
 			gulp.src( config.scripts.src ),
 
-			gulp.dest( config.scripts.dest )
+			$.jshint.reporter('default'),
+
+			gulp.dest( config.scripts.dest ),
+
+			$.if("main.js", combine(
+				$.jshint(),
+
+				$.notify(function(file){
+					
+					if(file.jshint.success){
+						return false;
+					}
+
+					var errors = file.jshint.results.map(function(data){
+						if(data.error){
+							return "(" + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
+						}
+					}).join("\n");
+
+					return file.relative + " (" + file.jshint.results.length + " errors)\n" + errors;
+				})
+			))
 
 		).on("error", $.notify.onError())
 
@@ -75,6 +96,10 @@ gulp.task('libs:js:build', function () {
 		).on("error", $.notify.onError())
 
 });
+
+
+
+
 
 
 gulp.task("scripts:watch", function(){
