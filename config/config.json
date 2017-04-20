@@ -2,7 +2,7 @@
 	"gulp": {
 
 		"project": {
-			"name": "MarketingUp",
+			"name": "ProjectName",
 
 			"root": "app/",
 			"trash": "./app/trash",
