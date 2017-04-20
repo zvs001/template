@@ -2,29 +2,29 @@
 	"gulp": {
 
 		"project": {
-			"name": "Winner",
+			"name": "MarketingUp",
 
 			"root": "app/",
 			"trash": "./app/trash",
 			"temp": "./app/temp/",
 
-			"rev": false,
+			"rev": true,
 			"sourcemaps": true
 		},
 		"server": {
-			"port": 3333,
+			"port": 1111,
 			"dir": "./app/",
 			"notifications": true,
 			"deviceSync": false
 		},
 
 		"styles":{
-			"src": "./dev/sass/*.sass",
-			"watch": "./dev/sass/**/*.sass",
+			"src": "./dev/sass/*.{sass,scss}",
+			"watch": "./dev/sass/**/*.{sass,scss}",
 			"dest": "./app/css/",
 
 			"bundle": {
-				"src": "./dev/libs/css/*.css",
+				"src": "./dev/assets/libs/css/*.css",
 				"name": "bundle.css",
 				"dest": "./app/css/"
 			}
@@ -40,17 +40,22 @@
 		},
 
 		"images":{
-			"src": "./dev/images/**/*.{png,jpg,jpeg}",
+			"src": "./dev/assets/images/**/*.{png,jpg,jpeg}",
 			"dest": "./app/images/",
 
 			"sprites": {
-				"src": "dev/images/spritify/**/*.png",
-				"group": "dev/images/spritify/group/*.png",
+				"src": "dev/assets/images/spritify/**/*.png",
+				"group": "dev/assets/images/spritify/group/*.png",
 				"pathUrl": "../images/sprites/",
+
 				"name": "icons.png",
 				"cssname": "sprites.sass",
 				"dest": "app/images/sprites/",
 				"cssdest": "dev/sass/c/sprites/"
+			},
+			"svg": {
+				"src": "dev/assets/images/svg/**/*.svg",
+				"dest": "app/images/svg"
 			}
 		},
 
@@ -58,14 +63,14 @@
 			"src": "./dev/js/**/*.js",
 			"dest": "./app/js/",
 			"bundle": {
-				"src": "./dev/libs/js/*.js",
+				"src": "dev/assets/libs/js/*.js",
 				"name": "bundle.js",
-				"dest": "./app/js/"
+				"dest": "app/js/"
 			}
 		},
 
 		"fonts": {
-			"src": "dev/fonts/**/*",
+			"src": "dev/assets/fonts/**/*",
 			"dest": "app/fonts"
 		},
 

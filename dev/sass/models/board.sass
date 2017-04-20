@@ -1,0 +1,83 @@
+.board
+	+b-sh(35px, 0, rgba(#424242, 0.16))
+	border: 1px solid $blue
+	&__head
+		background: $blue
+		color: #fff
+		padding: 23px 32px
+	&__body
+		background: #fff
+		padding: 14px 18px 28px 33px
+		font-size: 16px
+	&__title
+		margin: 0
+	&__checklist
+		margin: 2px 0 0
+		&.flex
+			@extend %flex
+			align-items: flex-start
+			li
+				width: 220px
+		li
+			padding: 0 0 0 30px
+			position: relative
+			line-height: 22px
+			font-size: 16px
+			&:before
+				content: ""
+				+zmdi
+				display: inline-block
+				position: absolute
+				top: 3px
+				left: 0
+				color: $redL
+				font-size: 16px
+	&__popw-checklist
+		margin: 20px 0 0 45px
+		&.flex
+			@extend %flex
+			align-items: flex-start
+			li
+				width: 220px
+		li
+			padding: 0 0 0 30px
+			position: relative
+			line-height: 1.8
+			font-size: 20px
+			color: #fff
+			&:before
+				content: ""
+				+zmdi
+				display: inline-block
+				position: absolute
+				top: 10px
+				left: 0
+				color: $redL
+				font-size: 16px
+	&__excerpt
+		margin: 0 0 9px
+	&__desc
+		font-size: 16px
+		line-height: 24px
+		margin: 8px 0 14px
+	&__button
+		width: 238px
+		&.offset
+			margin: 30px 0 0
+	&__link
+		font-size: 16px
+		margin: 0 11px 0 2px
+
+
+
+	//ext
+
+	&.blue
+		border: 1px solid #fff
+		.board__head
+			background: transparent
+			color: #fff
+			padding: 23px 32px
+		.board
+			&__body
+				color: $black

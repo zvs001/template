@@ -66,6 +66,11 @@ gulp.task('libs:js', function () {
 
 			gulp.src( config.scripts.bundle.src ),
 
+			$.order([
+				"jquery.js",
+				"**/*.js"
+			]),
+
 			$.sourcemaps.init(),
 			$.concat( config.scripts.bundle.name ),
 			$.sourcemaps.write(),
@@ -82,6 +87,11 @@ gulp.task('libs:js:build', function () {
 		return combine(
 
 			gulp.src( config.scripts.bundle.src ),
+
+			$.order([
+				"jquery.js",
+				"**/*.js"
+			]),
 
 			$.concat( config.scripts.bundle.name ),
 

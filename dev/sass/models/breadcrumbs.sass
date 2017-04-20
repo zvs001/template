@@ -1,15 +1,16 @@
 .breadcrumbs
-	margin: 0 0 0 2px
-.breadcrumb
-	display: inline-block
-	&:last-child
-		.breadcrumb__link:after
-			content: none
-	&__link
-		font-size: 12px
-		color: $gray
-		&:after
-			content: ">"
-			margin: 0 0 0 3px
-		&:hover, &:focus, &:active
-			color: $blue
+	background: linear-gradient(to bottom, rgb(236, 244, 251), #fff)
+	padding: 16px 0 10px
+	&__links
+		li
+			display: inline-block
+			margin: 0 40px 0 0
+			position: relative
+			&:after
+				content: ''
+				font: normal normal normal 14px/1 'Material-Design-Iconic-Font'
+				position: absolute
+				bottom: 3px
+				right: -23px
+			&:last-child:after
+				content: none

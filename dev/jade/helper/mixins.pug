@@ -1,8 +1,13 @@
 mixin meta
+	title website title
 	meta(charset="UTF-8")
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-mixin loader
-	.load-wrap
-		.load
-			i.spinner
-			span.label Смотреть еще
+
+mixin head
+	include ../models/head
+mixin foot
+	include ../models/foot
+mixin breadcrumbs
+	include ../models/breadcrumbs
+mixin page-nav
+	include ../models/page-nav

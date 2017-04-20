@@ -1,29 +1,83 @@
 @import bourbon
 /* template settings  */
-$container-width: 1171px
+//$container-width: 1171px
 
-$blue: #1ba1dd
-$blue2: #2268c6
+$gray: #c6cfd4
+$blue: #1056ae
+$red: #e61004
+$redL: #f7281c
+$black: #282828
 
-$black: #363636
-$gray: #7b7b7b
+//bs3 vars
+$sm: 768px
+$md: 992px
+$lg: 1200px
+
+@import c/c
+
+
+//modules should be before
+@import modules/slick/dots
+@import modules/arrows
+@import models/buttons
+@import models/links
+@import models/h
+
 
 //standart
-@import c/c
 @import parts/header
 @import parts/footer
 
 // tempalate packs
+// @import parts/home/init
+// @import parts/about/init
+// @import parts/services/init
+// @import parts/case-dev/init
+// @import parts/blog/init
+// @import parts/workshop/init
 
 //models
-@import models/forms
-@import models/section
-@import models/buttons
+@import models/table
+@import models/layers
 @import models/breadcrumbs
+@import models/board
+@import models/page-nav
+@import models/gmap
 
-//styles
-body
-	background-color: #fff
+@import modules/form
+// @import modules/svg
+@import modules/magnific/anim
+@import modules/spans
+@import modules/popup
+@import modules/jqueryui/selectmenu
+@import modules/flipclock/red_style 
 
 
-//@import tests
+
+// js example
+// window.addEventListener("load", removeLoadingClass);
+// 	function removeLoadingClass() {
+// 	  document.body.className = document.body.className.replace("no-anim", "");
+// 	}
+.no-anim
+	*, & *:before, & *:after
+		animation-play-state: paused !important
+
+.slick-slide
+	+o
+
+#grayscale
+	@extend %black-and-white
+
+#go-top
+	+sprite($go-top)
+	position: absolute
+	bottom: 0
+	right: -70px
+	transition: all 0.3s ease
+	&:hover
+		+b-sh(8px, 1px, rgba($blue, 0.15))
+		bottom: 5px
+
+//TODO remove this 
+@import tests

@@ -62,7 +62,11 @@ gulp.task('sass:build', function () {
 					loadPaths: [config.images.dest]
 				}),
 				autoprefixer, 
-				cssnano
+				cssnano({
+					safe: true,
+					minifyGradients: false
+
+				})
 			]),
 
 			$.if(config.project.rev, combine(

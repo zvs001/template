@@ -1,0 +1,33 @@
+.arrow
+	&__flex
+		+o
+		width: 40px
+		height: 40px
+		&:before, &:after
+			content: ""
+			width: 30px
+			height: 2px
+			background: $blue
+			position: absolute
+			left: 1px
+			top: 45%
+			transition: transform 0.4s ease
+		&:after
+			+ro-tr(45)
+		&:before
+			+ro-tr(-45)
+		&:hover
+			&:after, &:before
+				background: $red
+			&:after
+				+ro-tr(35)
+			&:before
+				+ro-tr(-35)
+
+
+
+		&.mini
+			+box(30px)
+			&:before, &:after
+				width: 20px
+				height: 1px

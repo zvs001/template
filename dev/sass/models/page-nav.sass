@@ -1,25 +1,59 @@
+//********Winner page nav
+// .pagenav
+// 	text-align: center
+// 	&__cont
+// 		display: inline-block
+// 		position: relative
+// 	&__links
+// 		color: $black
+// 		font-size: 16px
+// 	&__link
+// 		color: $black
+// 		padding: 2px
+// 		margin: 0 2px
+// 		&:hover
+// 			color: $blue
+// 	&__arr
+// 		+sprite($page-nav)
+// 		position: absolute
+// 		bottom: 0
+// 		&:hover
+// 			+sprite($page-nav-h)
+// 		&.left
+// 			left: -26px
+// 		&.right
+// 			right: -26px
+// 			+ro(180)
+
+//////////////MarketingUp////////////////
 .pagenav
-	text-align: center
-	&__cont
-		display: inline-block
-		position: relative
-	&__links
-		color: $black
-		font-size: 16px
+	position: absolute
+	right: 45px
+	top: 65px
+	&__split
+		margin: 0 6px
 	&__link
-		color: $black
-		padding: 2px
-		margin: 0 2px
-		&:hover
-			color: $blue
-	&__arr
-		+sprite($page-nav)
+		margin: 0 6px
+		font-size: 16px
+	&__arrow
+		width: 24px
+		height: 18px
+		border: 1px solid $blue
 		position: absolute
-		bottom: 0
-		&:hover
-			+sprite($page-nav-h)
+		bottom: 3px
+		display: block
+		&:after
+			@extend %pos-mid
+			content: ""
+			+zmdi
 		&.left
-			left: -26px
-		&.right
-			right: -26px
+			left: -38px
 			+ro(180)
+		&.right
+			right: -44px
+		&:hover
+			border-color: $red
+		&.disabled
+			border-color: #999999
+			color: #999999
+			opacity: 0.3

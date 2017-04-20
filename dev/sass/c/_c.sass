@@ -1,28 +1,39 @@
 @import fonts
 @import mixins
-@import models
-@import icons
 
 @import mixin/index
-/* TODO prites*/
+@import models
+
 //@import sprites
-@import sprites/sprites
+// @import sprites/sprites
+
+//sprite groups
+// @import sprites/home-sprites
+// @import sprites/service-group
+// @import sprites/service-cx-group
+
+// @import sprites/sprite-group
 
 //other fixes
-@import fix
-@import modules/wp
+// @import fix
+// @import modules/wp
+// @import modules/bootstrap 
+
+
+
+@import animations
+
+
 
 body
 	padding: 0
 	margin: 0
-	font-family: $ta
+	font-family: $roL
 	min-height: 100%
-a
-	text-decoration: none
 
-.container
-	max-width: $container-width
-	margin: auto
+// .container
+// 	max-width: $container-width
+// 	margin: auto
 
 ul
 	list-style: none
@@ -35,8 +46,16 @@ ul
 	height: 100%
 .cf
 	clear: both
-
+.mid
+	@extend %pos-mid
+.row__center
+	text-align: center
+.row__flex
+	@extend %flex
 //reset
 li
 	list-style: none
-
+p
+	font-size: 20px
+strong
+	font-family: $roBl

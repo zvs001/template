@@ -1,0 +1,28 @@
+=placeholder-color($color)
+	&::-webkit-input-placeholder
+		color: $color
+	&::-moz-placeholder
+		color: $color
+	&:-moz-placeholder
+		color: $color
+	&:-ms-input-placeholder
+		color: $color
+=ph-c($color)
+	+placeholder-color($color)
+
+
+=placeholder-font-family($family)
+	&::-webkit-input-placeholder
+		font-family: $family
+	&::-moz-placeholder
+		font-family: $family
+	&:-moz-placeholder
+		font-family: $family
+	&:-ms-input-placeholder
+		font-family: $family
+=placeholder-family($family)
+	+placeholder-font-family($family)
+=ph-ff($family)
+	+placeholder-font-family($family)
+=ph-f($family)
+	+placeholder-font-family($family)

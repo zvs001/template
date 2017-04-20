@@ -1,4 +1,32 @@
-=texture
-	background: url("../images/texture.png")
-=border-blue
-	border-bottom: 1px solid #448ccb
+=radial($x, $y, $radial-size)
+	$centerX: $x//600
+	$centerY: $y//800px
+	$c1: transparent
+	$c2: #ddd
+	$d: $radial-size//80px//distance
+	$sh-d: 7px//shadow-distance
+	$op: 0.2//opacity
+	$divider: 4//opacity divider
+	background-image: repeating-radial-gradient(circle $d at $centerX $centerY, $c1, $c1 ($d - $sh-d*2-2), rgba($c2, ($op/$divider)) ($d - $sh-d - 2), rgba($c2, $op) ($d - $sh-d - 1), rgba($c2, ($op/$divider)) ($d - $sh-d), $c1)
+
+=zmdi
+	font: normal normal normal 14px/1 'Material-Design-Iconic-Font'
+
+//marketing red bg with gradient lines
+%bg-red
+	&:before, &:after
+		border-radius: 50%
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+	&:before
+		background: $red
+		z-index: -2
+	&:after
+		background: linear-gradient(to right, transparent, transparent 4px, rgba(#fff, 0.15) 4px, rgba(#fff, 0.15))
+		+ro(45)
+		background-size: 5px
+			z-index: -1

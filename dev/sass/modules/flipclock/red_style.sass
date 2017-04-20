@@ -1,0 +1,47 @@
+.flip-clock-wrapper ul
+	width: 46px
+	height: 50px
+	box-shadow: none
+	margin: 5px 4px
+// 	font-size: 38px
+.flip-clock-wrapper ul li a div div.inn
+	color: $red
+	font-family: $roBl
+	font-size: 38px
+	font-family: $roBl
+	background: linear-gradient(to top, #cdcdcd, #fff)
+	line-height: 52px
+	border-radius: 5px 3px 3px 5px !important
+	text-shadow: none
+.flip-clock-divider
+	height: 50px
+	width: 11px
+.flip-clock-wrapper .flip
+	text-shadow: none
+.flip-clock-dot
+	+box(8px)
+	background: #fff
+	left: 2px
+	&.top
+		top: 18px
+	&.bottom
+		bottom: 5px
+.flip-clock-divider .flip-clock-label
+	right: -73px
+	top: initial
+	bottom: -2em
+	font-size: 16px
+	color: #fff
+.flip-clock-divider.seconds .flip-clock-label
+	right: -79px
+.flip-clock-divider.minutes .flip-clock-label
+	right: -78px
+.flip-clock-wrapper ul li a div.up .shadow
+	background: linear-gradient(to bottom, rgba(#fcaac0, 0.2), rgba(#fcaac0, 0));
+// .flip-clock-wrapper ul li a div.up
+// 	border-bottom: 1px solid rgba(#696969, 0.1)
+.flip-clock-wrapper ul li a div.up:after
+	top: 24px
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(black, 0.6)), color-stop(75%, rgba(0, 0, 0, 0.1)))
+	background: linear-gradient(left top, left bottom, 0% rgba(black, 0.6), 75% rgba(0, 0, 0, 0.1))

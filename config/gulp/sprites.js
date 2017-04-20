@@ -65,7 +65,7 @@ gulp.task("sprites:build", function(){
 					use: [pngquant()] 
 				}),
 
-			$.if( config.project.rev, $.rev() ),
+			$.if( config.project.rev, $.if( "*.png", $.rev() )),
 
 			$.if("*.sass", gulp.dest(config.images.sprites.cssdest)),
 			$.if("*.png", gulp.dest(config.images.sprites.dest)),
@@ -77,19 +77,23 @@ gulp.task("sprites:build", function(){
 });
 gulp.task("sprites:group", function(){
 
+	var group_name = "sprite-group";
 
 	return combine(
 			gulp.src( config.images.sprites.group ),
 
 			spritesmith({
-				imgName: "sprite-group.png",
-				cssName: "sprite-group.sass",
-				imgPath: config.images.sprites.pathUrl + config.images.sprites.name
+				imgName: group_name + ".png",
+				cssName: group_name + ".sass",
+				imgPath: config.images.sprites.pathUrl + group_name + ".png"
 			}),
 
 			buffer(),
 
-			$.imagemin(),
+			$.imagemin({ 
+					progressive: true, 
+					use: [pngquant()] 
+				}),
 
 			
 			$.if("*.sass", gulp.dest(config.images.sprites.cssdest)),

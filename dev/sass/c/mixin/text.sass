@@ -1,0 +1,35 @@
+=pre//it must have width
+	white-space: pre-wrap
+	overflow: hidden
+=text-h($lh, $rows)
+	line-height: $lh
+	max-height: $lh * $rows
+	overflow: hidden
+=text-h-static($lh, $rows)
+	line-height: $lh
+	height: $lh * $rows
+	overflow: hidden
+=text-h-s($lh, $rows)
+	line-height: $lh
+	height: $lh * $rows
+	overflow: hidden
+=text-h-none
+	max-height: initial
+	overflow: visible
+=text-h-static-none
+	overflow: visible
+	height: initial
+=text-h-s-none
+	overflow: visible
+	height: initial
+=text-overflow//it needs display block and width too
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+
+
+=select-color($color)
+	::selection
+		background-color: $color
+	::-moz-selection
+		background-color: $color

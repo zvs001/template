@@ -1,0 +1,118 @@
+.form
+	$alert: #ea0d00
+	&__row
+		@extend %flex
+		margin: 0 0 24px
+		align-items: flex-start
+	&__cell-2
+		margin-left: 25px
+	&__cell
+		flex-grow: 1
+		margin: 0 15px
+		width: 0
+		text-align: left
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
+		&.no-margin
+			margin: 0
+		&.alert
+			.form
+				&__label
+					color: $alert
+				&__input, &__area
+					border-color: $alert
+				&__alert
+					display: block
+	&__label
+		font-size: 14px
+		display: block
+		text-align: left
+		margin: 0 0 2px 2px
+	&__alert
+		font-size: 12px
+		text-align: left
+		display: none
+		color: $alert
+		margin: 4px 0 0 2px
+	&__input, &__area
+		font-family: $roL
+		color: $black
+		border-radius: 5px
+		border: 1px solid #d4d4d4
+		font-size: 16px
+		width: 100%
+		+o
+		&:focus
+			border: 1px solid $blue
+		+placeholder-color(#999999)
+		+ph-f($roLI)
+	&__area
+		padding: 11px 14px
+		line-height: 22px
+		resize: none
+	&__input
+		text-indent: 13px
+		line-height: 38px
+	&__check
+		input
+			display: none
+			&:checked + .form__check-label .form__check-icon
+				background: #fff
+			&:checked + .form__check-label .form__radio-icon, &:checked + .form__check-label .form__check-icon
+				border-color: $blue
+				&:after
+					content: ""
+
+		&-icon
+			width: 16px
+			height: 16px
+			border: 1px solid #fff
+			border-radius: 3px
+			display: inline-block
+			position: relative
+			margin: 0px 5px -2px 0
+			&:after
+				@extend %pos-mid
+				+sprite($check)
+		&-label
+			display: inline-block
+			user-select: none
+			cursor: pointer
+			margin: 10px 0 0
+			position: relative
+			padding: 0 0 0 30px
+		&-ord
+			padding: 0
+		&.inverse
+			.form__check
+				&-icon
+					border-color: $blue
+					&:after
+						+sprite($check-2)
+			input:checked + .form__check-label .form__check-icon
+				background: $blue
+
+
+
+	//special
+	&__inline
+		font-size: 16px
+		line-height: 40px
+		white-space: nowrap
+
+	&__radio-icon
+		+wh(20px)
+		border-radius: 50%
+		border: 1px solid #d4d4d4
+		display: inline-block
+		top: 49%
+		position: absolute
+		transform: translateY(-50%)
+		left: 0
+		&:after
+			background: $blue
+			+box(10px)
+			border-radius: 50%
+			@extend %pos-mid

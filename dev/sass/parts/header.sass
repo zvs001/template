@@ -1,0 +1,180 @@
+.header
+	background-color: #fff
+	border-bottom: 1px solid #d8d8d8
+	.container
+		padding-right: 0
+
+	&__logo
+		line-height: 95px
+	&__space
+		@extend %flex
+	&__desc
+		font-size: 14px
+		max-width: 210px
+		line-height: 21px
+
+	&__contacts
+		margin: 0 10px
+		li
+			margin: 5px 0
+		i.zmdi
+			margin: 0 8px 0 0
+			color: $red
+
+	&__feedback
+		width: 180px
+
+	&__socials
+		margin: 0 10px
+		cursor: default
+		li
+			display: inline-block
+			margin: 0 3px
+			padding: 2px
+	&__langs
+		margin: 0
+		li
+			display: inline-block
+			margin: 0 0 0 7px
+	&__lang
+		&.active
+			font-family: $roB
+			color: $red
+	&__nav
+		position: relative
+		&-btn
+			width: 238px
+			position: absolute
+			top: 50%
+			right: 0
+			margin: -25px 0
+
+	@media screen and (max-width: $lg)
+		&__desc
+			display: none
+		&__nav
+			&-btn
+				display: none
+	@media screen and (max-width: $md)
+		&__space
+			flex-wrap: wrap
+		&__socials
+			width: 60%
+			margin: 0 0 0 -8px
+		&__langs
+			width: 38%
+			text-align: right
+	@media screen and (max-width: $sm)
+		padding: 0 20px
+	@media screen and (max-width: 650px)
+		&__feedback
+			display: none
+	@media screen and (max-width: 480px)
+		&__space > *
+			width: 100%
+			text-align: center
+			margin: 10px 0
+		&__logo
+			margin: 0
+		
+.navigation
+	background-color: #FFF
+	position: relative
+	z-index: 10
+	.container
+		padding: 0
+.nav
+	width: 860px
+	&__links
+		@extend %flex
+		height: 84px
+		text-align: center
+		li
+			flex-grow: 1
+			position: relative
+			height: 100%
+			&:hover .nav__dropdown
+				display: block
+			&:hover .nav__dropdown-2
+				display: none
+	&__link
+		color: $black
+		font-size: 20px
+		display: block
+		height: 100%
+		position: relative
+		// transition: all 0.15s ease-in-out
+		&.date
+			color: $blue
+		&:hover
+			color: #fff
+			background: $blue
+			font-family: $roM
+		span
+			white-space: nowrap
+		i
+			font-size: 15px
+			margin: 0 0 0 5px
+		&-2
+			padding: 0 0 0 16px
+			width: 335px
+			white-space: nowrap
+			font-size: 16px
+			display: block
+			i
+				font-size: 14px
+				margin: 0 0 0 8px
+			&:after
+				content: ""
+				+zmdi
+				display: none
+				margin: 0 0 0 10px
+				vertical-align: -1px
+				font-size: 14px
+			&:hover
+				background: #fafafa
+		&-3
+			display: block
+			padding: 0 0 0 16px
+			&:hover
+				background: rgba($blue, 0.25)
+
+
+
+		&-date
+			background-color: $blue
+			color: #fff
+			font-family: $roB
+			font-size: 12px
+			line-height: 14px
+			display: inline-block
+			padding: 5px
+
+			+pos-mid-x
+			top: 0
+			
+	&__dropdown
+		display: none
+		line-height: 40px
+		background-color: #FFF
+		position: absolute
+		left: 0
+		top: 100%
+		text-align: left
+		+b-sh(18px, 0, rgba(#666666, 0.2))
+		& > li
+			border-bottom: 1px solid #d8d8d8
+		& > li:last-child
+			border: none
+		&-2
+			@extend .nav__dropdown
+			top: 0
+			left: 100%
+			width: 100%
+			z-index: -1
+		.nav__dropdown-2 + .nav__link-2:after
+			display: inline-block
+		li:hover .nav__dropdown-2
+			display: block
+	@media screen and (max-width: $lg)
+		width: 100%

@@ -1,0 +1,53 @@
+=scale($kof)
+	transform: scale($kof)
+=ro($ugol)
+	transform: rotate($ugol + deg)
+
+	
+=ro-tr($ugol) //not tested
+	transform: rotate($ugol + deg) translate(50%, 50%)
+
+=ro-tr-x($ugol)
+	transform: rotate($ugol + deg) translateX(50%)
+
+=ro-tr-y($ugol)
+	transform: rotate($ugol + deg) translateY(50%)
+
+
+=tr($sec)
+	+transition(all $sec + s ease-in-out)
+=trtr($sec)
+	transition: transform $sec + s
+	-webkit-transition
+	-webkit-transform $sec + s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//mirorring
+=scaleX
+	transform: scale(-1, 1)
+=scale-x
+	transform: scale(-1, 1)
+=scaleY
+	transform: scale(1, -1)
+=scale-y
+	transform: scale(1, -1)
+=scaleXY
+	transform: scale(-1, -1)
+=scale-xy
+	transform: scale(-1, -1)

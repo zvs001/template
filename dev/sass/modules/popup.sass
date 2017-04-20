@@ -1,0 +1,44 @@
+.pop
+	width: 750px
+	@extend %pos-mid
+	text-align: center
+	background: #fff
+	padding: 20px 30px
+	.form__row
+		align-items: center
+	&__wrapper
+		position: fixed
+		width: 100%
+		height: 100%
+		background: rgba(#000, 0.85)
+		z-index: 999
+		top: 0
+		left: 0
+		display: none
+		&.active
+			display: block
+			.pop
+				animation: fromInside 0.8s ease
+	&__head
+		background: $blue
+		margin: -20px -30px 20px
+		padding: 22px 0 15px
+		line-height: 39px
+	&__close
+		position: absolute
+		top: 0
+		right: 13px
+		cursor: pointer
+
+		color: #fff
+		opacity: 0.5
+		font-size: 36px
+	&-cb
+		&__submit
+			width: 260px
+			margin: 15px 0 0
+@keyframes fromInside
+	0%
+		top: 0
+	100%
+		top: 50%

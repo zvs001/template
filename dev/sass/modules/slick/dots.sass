@@ -1,0 +1,28 @@
+ul.slick-dots
+	text-align: center
+	li
+		display: inline-block
+		&.slick-active
+			button
+				&:after
+					content: ""
+					width: 6px
+					height: 6px
+					border-radius: 50%
+					position: absolute
+					left: 2px
+					top: 2px
+					background: #fff
+	button
+		color: transparent
+		background: transparent
+		border: 2px solid #fff
+		width: 14px
+		height: 14px
+		margin: 0 4px
+		cursor: pointer
+		position: relative
+		border-radius: 50%
+		font-size: 0
+		padding: 0
+		

@@ -10,7 +10,6 @@ const config = require("../config.json").gulp;
 gulp.task('server', function () {
 
 		browserSync.init({
-
 				port: config.server.port,
 				server: {
 					baseDir: config.server.dir

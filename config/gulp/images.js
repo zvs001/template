@@ -14,7 +14,7 @@ const combine = require('stream-combiner2').obj
 const config = require("../config.json").gulp;
 
 const pngquant = require('imagemin-pngquant');
-
+const svgmin = require("gulp-svgmin");
 
 gulp.task('images' ,function () {
 
@@ -32,7 +32,12 @@ gulp.task('images' ,function () {
 					use: [pngquant()] 
 				}),
 
-				gulp.dest( config.images.dest )
+				gulp.dest( config.images.dest ),
+
+				gulp.src( config.images.svg.src ),
+				$.newer( config.images.svg.dest ),
+				svgmin(),
+				gulp.dest( config.images.svg.dest )
 
 		).on("error", $.notify.onError())
 });
@@ -42,5 +47,6 @@ gulp.task('images' ,function () {
 gulp.task("images:watch", function(){
 
 	gulp.watch( config.images.src, gulp.series('images') );
+	gulp.watch( config.images.svg.src , gulp.series('images') );
 
 });

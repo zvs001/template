@@ -1,25 +1,10 @@
+//old mixin file
+
 =ls($valuepx)
 	letter-spacing: $valuepx
 =just
 	text-align: justify
-=ro($ugol)
-	transform: rotate($ugol + deg)
-=ro-tr($ugol) //not tested
-	transform: rotate($ugol + deg) translate(50%, 50%)
 
-=ro-tr-x($ugol) //not tested
-	transform: rotate($ugol + deg) translateX(50%)
-
-=ro-tr-y($ugol)
-	transform: rotate($ugol + deg) translateY(50%)
-
-
-=tr($sec)
-	+transition(all $sec + s ease-in-out)
-=trtr($sec)
-	transition: transform $sec + s
-	-webkit-transition
-	-webkit-transform $sec + s
 =c($hex)
 	color: $hex
 =last
@@ -49,88 +34,21 @@
 	right: initial
 =box-shadow($a, $b, $color)
 	-webkit-box-shadow: 0px 0px $a $b $color
-	-moz-box-shado: 0px 0px $a $b $color
+	-moz-box-shadow: 0px 0px $a $b $color
 	box-shadow: 0px 0px $a $b $color
 =b-sh($a, $b, $color)
 	-webkit-box-shadow: 0px 0px $a $b $color
-	-moz-box-shado: 0px 0px $a $b $color
+	-moz-box-shadow: 0px 0px $a $b $color
 	box-shadow: 0px 0px $a $b $color
 =box-shadow-xy($x, $y, $a, $b, $color)
 	-webkit-box-shadow: $x $y $a $b $color
-	-moz-box-shado: $x $y $a $b $color
+	-moz-box-shadow: $x $y $a $b $color
 	box-shadow: $x $y $a $b $color
 =b-sh-xy($x, $y, $a, $b, $color)
 	-webkit-box-shadow: $x $y $a $b $color
-	-moz-box-shado: $x $y $a $b $color
+	-moz-box-shadow: $x $y $a $b $color
 	box-shadow: $x $y $a $b $color
-=position-middle
-	position: absolute
-	left: 50%
-	top: 50%
-	transform: translate(-50%, -50%)
-=pos-mid
-	position: absolute
-	left: 50%
-	top: 50%
-	transform: translate(-50%, -50%)
-=position-middle-custom($x, $y)
-	position: absolute
-	left: $x
-	top: $y
-	transform: translate(-50%, -50%)
-=pos-mid-c($x, $y)
-	position: absolute
-	left: $x
-	top: $y
-	transform: translate(-50%, -50%)
-=pos-mid-x
-	position: absolute
-	left: 50%
-	transform: translateX(-50%)
-=pos-mid-y
-	position: absolute
-	top: 50%
-	transform: translateY(-50%)
-=pre//it must have width
-	white-space: pre-wrap
-	overflow: hidden
-=scaleX
-	transform: scale(-1, 1)
-=scale-x
-	transform: scale(-1, 1)
-=scaleY
-	transform: scale(1, -1)
-=scale-y
-	transform: scale(1, -1)
-=scaleXY
-	transform: scale(-1, -1)
-=scale-xy
-	transform: scale(-1, -1)
-=text-h($lh, $rows)
-	line-height: $lh
-	max-height: $lh * $rows
-	overflow: hidden
-=text-h-static($lh, $rows)
-	line-height: $lh
-	height: $lh * $rows
-	overflow: hidden
-=text-h-s($lh, $rows)
-	line-height: $lh
-	height: $lh * $rows
-	overflow: hidden
-=text-h-none
-	+maxhi
-	overflow: visible
-=text-h-static-none
-	overflow: visible
-	+hi
-=text-h-s-none
-	overflow: visible
-	+hi
-=text-overflow //it needs display block and width too
-	overflow: hidden
-	white-space: nowrap
-	text-overflow: ellipsis
+
 =image-size($min_width, $max_width, $min_height, $max_height)
 	min-width: $min_width
 	max-width: $max_width
@@ -146,13 +64,8 @@
 	-moz-column-gap: $px
 	column-gap: $px
 
-=select-color($color)
-	::selection
-		background-color: $color
-	::-moz-selection
-		background-color: $color
 =o-color($color)
-    outline-color: $color
+	outline-color: $color
 
 =toggle // a#toggle>span  .on
 	#toggle
@@ -196,3 +109,35 @@
 	#toggle.on + #menu
 			opacity: 1
 			visibility: visible
+
+
+
+//// deprecated  >>>
+=position-middle
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+=pos-mid
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+=position-middle-custom($x, $y)
+	position: absolute
+	left: $x
+	top: $y
+	transform: translate(-50%, -50%)
+=pos-mid-c($x, $y)
+	position: absolute
+	left: $x
+	top: $y
+	transform: translate(-50%, -50%)
+=pos-mid-x
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+=pos-mid-y
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
