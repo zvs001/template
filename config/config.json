@@ -2,7 +2,7 @@
 	"gulp": {
 
 		"project": {
-			"name": "ProjectName",
+			"name": "MarketingUp",
 
 			"root": "app/",
 			"trash": "./app/trash",
@@ -63,7 +63,7 @@
 			"src": "./dev/js/**/*.js",
 			"dest": "./app/js/",
 			"bundle": {
-				"src": "dev/assets/libs/js/*.js",
+				"src": "dev/assets/libs/js/**/*.js",
 				"name": "bundle.js",
 				"dest": "app/js/"
 			}
@@ -84,6 +84,11 @@
 			"sprites" : "sprite-names.json"
 		},
 
-		"archive": "./archive"
+		"archive": "./archive",
+
+		"common":{
+			"src": "dev/assets/root/**/{*,.*}",
+			"dest": "app/"
+		}
 	}
 }

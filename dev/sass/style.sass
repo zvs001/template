@@ -17,11 +17,11 @@ $lg: 1200px
 
 
 //modules should be before
-@import modules/slick/dots
-@import modules/arrows
-@import models/buttons
-@import models/links
-@import models/h
+// @import modules/slick/dots
+// @import modules/arrows
+// @import models/buttons
+// @import models/links
+// @import models/h
 
 
 //standart
@@ -37,20 +37,20 @@ $lg: 1200px
 // @import parts/workshop/init
 
 //models
-@import models/table
-@import models/layers
-@import models/breadcrumbs
-@import models/board
-@import models/page-nav
-@import models/gmap
+// @import models/table
+// @import models/layers
+// @import models/breadcrumbs
+// @import models/board
+// @import models/page-nav
+// @import models/gmap
 
-@import modules/form
-// @import modules/svg
-@import modules/magnific/anim
-@import modules/spans
-@import modules/popup
-@import modules/jqueryui/selectmenu
-@import modules/flipclock/red_style 
+// @import modules/form
+// // @import modules/svg
+// @import modules/magnific/anim
+// @import modules/spans
+// @import modules/popup
+// @import modules/jqueryui/selectmenu
+// @import modules/flipclock/red_style 
 
 
 
@@ -63,21 +63,12 @@ $lg: 1200px
 	*, & *:before, & *:after
 		animation-play-state: paused !important
 
-.slick-slide
-	+o
+// .slick-slide
+// 	+o
 
 #grayscale
 	@extend %black-and-white
 
-#go-top
-	+sprite($go-top)
-	position: absolute
-	bottom: 0
-	right: -70px
-	transition: all 0.3s ease
-	&:hover
-		+b-sh(8px, 1px, rgba($blue, 0.15))
-		bottom: 5px
 
 //TODO remove this 
 @import tests

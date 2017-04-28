@@ -29,7 +29,7 @@ gulp.task('default',
 
 
 gulp.task("build",
-	gulp.series("sprites:build", gulp.parallel("images", "sprites:group"), 'styles:build', "scripts:build", "fonts:build", "jade:build")
+	gulp.series("sprites:build", gulp.parallel("images", "sprites:group"), 'styles:build', "scripts:build", "fonts:build", "jade:build", "common")
 );
 
 gulp.task("rebuild", gulp.series("clear", "build"));
