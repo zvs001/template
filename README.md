@@ -1,10 +1,11 @@
 
-#Gulp template
+# Gulp template
 ```npm
 git clone https://github.com/zvs001/template
 ```
 
-##Gulp tasks
+## Gulp tasks
+
 ``gulp`` - run dev mode (all tasks, watchers, server)
 
 ``gulp build`` - build project (all minified tasks)
