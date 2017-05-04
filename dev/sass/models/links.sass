@@ -1,68 +1,61 @@
 a
 	text-decoration: none
-	color: $blue
+	color: $brown
 	&:hover, &:focus
-		color: $red
+		color: $brown
+	&:focus
 		text-decoration: none
-	i
-		margin: 0 0 0 5px
-		vertical-align: -1px
+
 
 .link
-	&__black
-		color: $black
-	&__black-b
-		color: $black
-		&:hover, &:focus
-			color: $blue
-	&__icon
-		color: $blue
-		font-size: 20px
-		&:hover, &:focus
-			color: #e01105
-	&__blue
-		@extend a
-		cursor: pointer
-		font-size: 16px
-	&__white
-		color: #fff
-		font-size: 14px
+	// @extend %hoverEffectBorderZoomInCenter-reverse
+	
+	display: inline-block
+	position: relative
+	line-height: 2rem
+	&:before
+		content: ""
+		height: 1px
+		width: 100%
+		background: $brown
+		position: absolute
+		left: 0
+		bottom: 0
+	&:hover
+		text-decoration: none
+		color: $brownD
+	&:focus
+		text-decoration: none
+		color: $brown
+
+
+
+	
+	&--black
+		@extend %hoverEffectBorderZoomInCenter
+		// @extend %hoverEffectBorderZoomFromLeft
+
+
+		color: #000
+		position: relative
+		&:focus
+			color: #000
+		&:before
+			background: $brown
+			bottom: -1px
 		&:hover
-			color: #fff
-			font-family: $roM
-			text-decoration: underline
-	&__text
-		color: $black
-		&:hover, &:active, &:focus
-			color: $black
-	&__red
-		color: $red
-		&:hover, &:focus
-			color: lighten($red, 9%)
-	&__under
-		color: $blue
-		display: inline-block
-		line-height: 14px
-		&.active
-			color: #282828
-			cursor: default
-			&:hover, &:focus
-				border: none
-		&:hover, &:focus
-			border-bottom: 2px solid rgba($blue, 0.5)
-	&__u
-		&:hover, &:focus
-			color: $blue
-			text-decoration: underline
+			text-decoration: none
+			color: #000
+		
+
 	&__inherit
 		text-decoration: inherit
 		color: inherit
 		&:hover, &:focus
 			@extend .link__inherit
 
-	// &__wrap
-	// 	position: absolute
-	// 	top: 0
-	// 	left: 0
-	// 	right: 0
-	// 	bottom: 0
+	&__iconed
+		&:after
+			left: -28px
+			content: ""
+			@extend %pos-mid-y

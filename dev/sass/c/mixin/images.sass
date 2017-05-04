@@ -9,3 +9,14 @@
 =bg-c($url)
 	background: url($url) no-repeat center
 	background-size: cover
+
+//it is mixins for [img]
+//html format: .image__container > img
+=image-cover-xy($x, $y)
+	height: $y
+	width: $x
+	object-fit: cover
+	object-position: center
+
+=image-cover($height)
+	+image-cover-xy(100%, $height)

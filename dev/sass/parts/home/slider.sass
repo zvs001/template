@@ -1,0 +1,31 @@
+.slider
+	$h: 600px
+	position: relative
+	height: $h
+
+	&__outer
+		padding: 30px 0
+		
+	&__images
+		&-slide
+			@extend %image-cont
+			height: $h
+
+		img
+			@extend %pos-mid
+	
+	&__texts
+		width: 370px
+		background: rgba(#f7f7f7, 0.83)
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		+h
+		&-slide
+			height: $h
+			vertical-align: middle
+			display: table !important
+			padding: 0 26px 109px
+
+			font-family: $ptsa

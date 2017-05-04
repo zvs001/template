@@ -1,0 +1,42 @@
+//-
+	You can regenerate something like this on https://megatags.co/
+
+title= config.title || PAGE
+meta(charset="UTF-8")
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+//- Search Engine
+meta(name="description", content= config.description)
+-if(config.image)
+	meta(name="image", content= config.image)
+
+//- Schema.org for Google
+meta(itemprop="name", content= config.title || PAGE)
+meta(itemprop="description", content= config.description)
+-if(config.image)
+	meta(itemprop="image", content= config.image)
+
+
+//- Open Graph general (Facebook, Pinterest & Google+)
+meta(name="og:type", content= config.type || "website")
+meta(name="og:title", content= config.title || PAGE)
+meta(name="og:description", content= config.description)
+-if(config.image)
+	meta(name="og:image", content= config.image)
+-if(config.video)
+	meta(name="og:video", content= config.video)
+
+-if(config.url)
+	meta(name="og:url", content= config.url)
+
+-if(config.website_name)
+	meta(name="og:site_name", content= config.website_name)
+
+meta(name="og:locale", content= config.locale || "en_US")
+
+if(config.another_locales)
+	each locale in config.another_locales
+		meta(name="og:locale:alternate", content= locale)
+
+//- <meta name="fb:admins" content="adminID">
+//- <meta name="fb:app_id" content="facebookAppId">

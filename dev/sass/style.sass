@@ -1,12 +1,7 @@
 @import bourbon
-/* template settings  */
-//$container-width: 1171px
 
-$gray: #c6cfd4
-$blue: #1056ae
-$red: #e61004
-$redL: #f7281c
-$black: #282828
+$black: #494847
+$brown: #cd9967
 
 //bs3 vars
 $sm: 768px
@@ -21,54 +16,39 @@ $lg: 1200px
 // @import modules/arrows
 // @import models/buttons
 // @import models/links
-// @import models/h
+// @import models/icons
+// @import models/forms
+// @import models/section
 
 
-//standart
+// standart
 @import parts/header
-@import parts/footer
+// @import parts/navigation
+// @import parts/footer
 
 // tempalate packs
 // @import parts/home/init
-// @import parts/about/init
-// @import parts/services/init
-// @import parts/case-dev/init
-// @import parts/blog/init
-// @import parts/workshop/init
+
 
 //models
 // @import models/table
-// @import models/layers
 // @import models/breadcrumbs
 // @import models/board
 // @import models/page-nav
 // @import models/gmap
 
-// @import modules/form
-// // @import modules/svg
+
 // @import modules/magnific/anim
-// @import modules/spans
+
 // @import modules/popup
 // @import modules/jqueryui/selectmenu
 // @import modules/flipclock/red_style 
 
 
-
-// js example
-// window.addEventListener("load", removeLoadingClass);
-// 	function removeLoadingClass() {
-// 	  document.body.className = document.body.className.replace("no-anim", "");
-// 	}
-.no-anim
-	*, & *:before, & *:after
-		animation-play-state: paused !important
-
-// .slick-slide
-// 	+o
-
-#grayscale
-	@extend %black-and-white
-
-
 //TODO remove this 
 @import tests
+
+
+//	another independed modules
+@import includes/animation-wait
+// @import includes/slick/no-outline

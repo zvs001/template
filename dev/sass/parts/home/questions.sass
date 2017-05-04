@@ -1,0 +1,66 @@
+.questions
+	padding: 11px 0 261px
+
+	&__outer
+		padding: 21px 0
+	.row > div
+		position: static
+
+	&__button
+		// display: table-cell
+		color: #424242
+		vertical-align: middle
+		text-align: center
+		cursor: pointer
+		text-transform: uppercase
+		position: relative
+		font: 1.6rem/2.2rem $ptsB
+		user-select: none
+		+o
+		// appearance: none
+		+box(100%)
+		&:before
+			content: ""
+			left: 0
+			right: 0
+			top: 0
+			height: 3px
+			background: #f7f7f7
+			position: absolute
+		.lowercase
+			text-transform: lowercase
+			display: block
+
+		&:hover
+			color: $brown
+			&:before
+				background: $brown
+		&.questions__button--active
+			background: #f7f7f7
+			color: $brownD
+			cursor: default
+			&:before
+				background: $brownD
+			& + .questions__tab-content
+				display: block
+
+	&__tab
+		display: table
+		height: 74px
+		width: 100%
+		&-content
+			position: absolute
+			left: 0
+			width: 100%
+			// height: 200px
+			background: #f7f7f7
+			margin: -1px 0 0
+			padding: 16px 0 36px
+			display: none
+	
+	&__article-span
+		font: 1.3rem/1.5rem $ptsa
+		color: #848484
+		@extend %text-h-inline
+		padding: 3px 0 5px 30px
+		margin: 15px 0

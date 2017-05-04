@@ -1,0 +1,30 @@
+.icon
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+	&__letter:after
+		+sprite($icon-letter)
+
+	&__people:after
+		+sprite($icon-people)
+
+	&__search:after
+		+sprite($icon-zoom)
+
+	&__list:after
+		+sprite($icon-list)
+
+	&__photo:after
+		+sprite($icon-photo)
+
+	&__timer:after
+		+sprite($icon-timer)
+	&__map:after
+		+sprite($icon-map)
+		margin-left: 2px
+
+	&__phone:after
+		+sprite($icon-phone)

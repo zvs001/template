@@ -1,0 +1,46 @@
+//-//////////////////////////////////// 
+	Here you can set default setting
+
+//-////////////////////////////////////
+
+
+- var config = {}
+
+- config.title = ""//if no title it will take PAGE value
+
+//-150 characters for SEO, 200 characters for Twitter & Facebook
+- config.description = "Website description. 150 characters for SEO, 200 characters for Twitter & Facebook"
+
+
+//- image and video should have absolute url
+- config.image = ""
+- config.video = ""
+
+//- 
+	Канонический URL-адрес объекта, который будет использоваться в качестве его постоянного ID в графе, 
+	example: "http://www.imdb.com/title/tt0117500/".
+- config.url = ""
+
+//-
+	Если ваш объект является частью большого web-сайта, название, должно отображаться на всех страницах сайта. Например, "IMDb".
+- config.website_name = ""
+
+//-
+	object type
+		examples: 
+			product, video.movie, article, website, music.song, book, profile
+			more examples => http://ruogp.me/#types
+- config.type = ""
+
+//-
+		en_US - English (United States) - [default]
+		ru_RU  [or]  ru - Russian (Russia)
+		uk_UA  [or]  ua - Ukrainian (Ukraine)
+
+		more locales: =>  http://www.roseindia.net/tutorials/I18N/locales-list.shtml
+
+- config.locale = "ru_RU"
+
+//-
+	you can set additional locales for your website
+- config.another_locales = ["uk_UA"] //must be an array

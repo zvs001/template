@@ -1,0 +1,27 @@
+.offers
+	padding: 22px 0
+
+	&__outer
+		padding: 20px 0
+
+	&__image
+		width: 270px
+		height: 170px
+		@extend %image-cont
+
+		img
+			@extend %pos-mid
+			+image-size(100%, 160%, 170px, 230px)
+
+	&__content
+		@extend %image-cont
+		height: 12.4rem
+		margin: 3px 0 15px
+
+	&__title
+		margin: 1rem 0
+		+text-h(2.2rem, 2)
+
+	&__text
+		font: 1.4rem/2rem $ptsa
+		color: #626262

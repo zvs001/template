@@ -1,43 +1,18 @@
 button
 	border: none
 	background: none
-	font-family: $ro
-
-%button
-	line-height: 50px
-	font-size: 16px
-	display: inline-block//for <a>
-	text-align: center
-	transition: color, background 0.25s ease
-	&.fill
-		width: 100%
-
 
 .button
-	&__red
-		@extend %button
-		background-color: $redL
+	display: inline-block
+	font-size: 1.8rem
+	line-height: 2.6rem
+	background: $brown
+	color: #fff
+	padding: 0 2.8rem 0.4rem
+	transition: background 0.3s ease-out
+	&:hover
 		color: #fff
-		&:hover, &:focus
-			background: $red
-			color: #fff
-		&:disabled
-			background: #fdc9c6
-	
-	&__transparent
-		@extend %button
+		text-decoration: none
+		background: $brownD
+	&:focus
 		color: #fff
-		border: 2px solid #fff
-		line-height: 46px
-		&:hover, &:focus
-			background: #fff
-			color: $redL
-		&--red
-			@extend %button
-			color: $redL
-			border: 2px solid $redL
-			line-height: 46px
-			font-family: $ro
-			&:hover, &:focus
-				background: $red
-				color: #fff

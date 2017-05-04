@@ -1,0 +1,16 @@
+mixin meta
+	include chunks/meta
+mixin head
+	include chunks/head
+mixin foot
+	include chunks/foot
+mixin breadcrumbs
+	include ../models/breadcrumbs
+mixin page-nav
+	include ../models/page-nav
+
+
+mixin doctype
+	<!DOCTYPE html>
+mixin doc
+	+doctype

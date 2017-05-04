@@ -1,0 +1,20 @@
+.nav
+	@extend %flex
+
+	&__outer
+		background: $brown
+	&__link
+		font: 1.6rem/4.7rem $ptsB 
+		color: #fff
+		display: inline-block
+		flex-grow: 1
+		text-align: center
+		border-left: 1px solid #b98653
+		&:last-child
+			border-right: 1px solid #b98653
+		&:hover, &--active
+			color: #fff
+			background: $brownD
+			text-decoration: none
+		&:focus
+			color: #fff

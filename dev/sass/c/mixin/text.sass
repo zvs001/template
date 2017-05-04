@@ -23,9 +23,14 @@
 	overflow: visible
 	height: initial
 =text-overflow//it needs display block and width too
+	position: relative
 	overflow: hidden
 	white-space: nowrap
 	text-overflow: ellipsis
+=text-o
+	+text-overflow
+=text-h-inline
+	+text-overflow
 
 
 =select-color($color)
@@ -33,3 +38,6 @@
 		background-color: $color
 	::-moz-selection
 		background-color: $color
+
+%text-h-inline
+	+text-overflow
